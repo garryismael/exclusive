@@ -1,1 +1,234 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+:root {
+  /* Success Colors */
+  --success-50: #ECFDF5;
+  --success-100: #D1FAE5;
+  --success-200: #A7F3D0;
+  --success-300: #6EE7B7;
+  --success-400: #34D399;
+  --success-500: #10B981;
+  --success-600: #059669;
+  --success-700: #047857;
+  --success-800: #065F46;
+  --success-900: #064E3B;
+
+  /* Warning Colors */
+  --warning-50: #FFFBEB;
+  --warning-100: #FEF3C7;
+  --warning-200: #FDE68A;
+  --warning-300: #FCD34D;
+  --warning-400: #FBBF24;
+  --warning-500: #F59E0B;
+  --warning-600: #D97706;
+  --warning-700: #B45309;
+  --warning-800: #92400E;
+  --warning-900: #78350F;
+
+  /* Error Colors */
+  --error-50: #FFF1F2;
+  --error-100: #FFE4E6;
+  --error-200: #FECDD3;
+  --error-300: #FDA4AF;
+  --error-400: #FB7185;
+  --error-500: #F43F5E;
+  --error-600: #E11D48;
+  --error-700: #BE123C;
+  --error-800: #9F1239;
+  --error-900: #881337;
+
+  /* Neutral Colors */
+  --neutral-50: #FFFFFF;
+  --neutral-100: #F4F4F6;
+  --neutral-200: #E9EAEC;
+  --neutral-300: #D1D4DB;
+  --neutral-400: #9096A2;
+  --neutral-500: #4D566B;
+  --neutral-600: #202C46;
+  --neutral-700: #1B253C;
+
+  /* Blue Colors */
+  --blue-50: #F5F7FE;
+  --blue-100: #F5F7FE;
+  --blue-200: #ADBEF7;
+  --blue-300: #5A7DEE;
+  --blue-400: #315CEA;
+  --blue-500: #2A4EC7;
+  --blue-600: #2240A4;
+
+  /* Purple Colors */
+  --purple-50: #F8F5FE;
+  --purple-100: #F1ECFC;
+  --purple-200: #C9B2F3;
+  --purple-300: #9265E8;
+  --purple-400: #773FE2;
+  --purple-500: #6436BF;
+
+  /* Magenta Colors */
+  --magenta-50: #FEF6F8;
+  --magenta-100: #FCEEF1;
+  --magenta-200: #F4BAC8;
+  --magenta-300: #E97591;
+  --magenta-400: #E35275;
+  --magenta-500: #C24764;
+
+  /* Green Colors */
+  --green-50: #F4FDF7;
+  --green-100: #E9FAEF;
+  --green-200: #A9EBBF;
+  --green-300: #52D880;
+  --green-400: #27CE60;
+  --green-500: #21AF52;
+
+  /* Red Colors */
+  --red-50: #FCE9EC;
+  --red-100: #F9D2D9;
+  --red-200: #F2A6B4;
+  --red-300: #E9677F;
+  --red-400: #DF2648;
+  --red-500: #B71F3B;
+  --red-600: #FCCF9C;
+  --red-700: #FAB261;
+  --red-800: #F89118;
+  --red-900: #C77414;
+}
+
+.top {
+  @apply z-40 left-0 right-0 flex flex-row items-center justify-center h-20 gap-2 text-xs text-center bg-black text-zinc-50;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@layer base {
+  body {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    @apply bg-white;
+  }
+}

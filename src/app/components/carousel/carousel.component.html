@@ -1,0 +1,20 @@
+<div class="embla relative h-full" emblaCarousel [options]="options" [plugins]="plugins">
+  <div class="embla__container">
+    <ng-content select="[embla-slide]"></ng-content>
+  </div>
+  <div class="flex justify-center absolute left-1/2 -translate-x-1/2 bottom-4 md:bottom-2">
+    <ng-container *ngIf="numberOfSlides > 1; else noDots">
+      <ng-container *ngFor="let dot of dots; let i = index">
+        <button
+          class="mx-1 h-1.5 xl:h-2.5 w-1.5 xl:w-2.5 rounded-full p-0"
+          [ngClass]="{
+            'scale-125 transform bg-red-400 hover:bg-red-400 border border-white': i === currentSlide,
+            'bg-gray-300 hover:bg-gray-300': i !== currentSlide
+          }"
+          [attr.aria-label]="'Go to slide ' + (i + 1)"
+          (click)="scrollTo(i)"></button>
+      </ng-container>
+    </ng-container>
+    <ng-template #noDots></ng-template> <!-- Empty template when no dots -->
+  </div>
+</div>
