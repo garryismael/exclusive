@@ -231,4 +231,8 @@
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     @apply bg-white;
   }
+
+  .title {
+    @apply border-l-8 border-l-red-400 text-red-400 pl-4 text-left w-full font-bold text-sm;
+  }
 }
