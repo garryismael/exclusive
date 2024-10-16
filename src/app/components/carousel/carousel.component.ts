@@ -3,6 +3,7 @@ import {
   AfterContentInit,
   AfterViewInit,
   Component,
+  Input,
   NgZone,
   ViewChild,
 } from '@angular/core';
@@ -11,6 +12,7 @@ import {
   EmblaCarouselType,
 } from 'embla-carousel-angular';
 import Autoplay from 'embla-carousel-autoplay';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -20,7 +22,13 @@ import Autoplay from 'embla-carousel-autoplay';
   styleUrl: './carousel.component.css',
 })
 export class CarouselComponent implements AfterViewInit {
-  @ViewChild(EmblaCarouselDirective) emblaRef!: EmblaCarouselDirective ;
+  @ViewChild(EmblaCarouselDirective) emblaRef!: EmblaCarouselDirective;
+
+  @Input()
+  useDot: boolean = false;
+
+  @Input()
+  dotsContainerClass: string = '';
 
   private emblaApi?: EmblaCarouselType;
   public options = { loop: false };
@@ -28,7 +36,7 @@ export class CarouselComponent implements AfterViewInit {
   public dots: number[] = [];
   public currentSlide: number = 0;
 
-  constructor(private ngZone: NgZone) {}
+  constructor(private ngZone: NgZone, private cdr: ChangeDetectorRef) {}
 
   ngAfterViewInit(): void {
     this.emblaApi = this.emblaRef.emblaApi;
@@ -37,6 +45,7 @@ export class CarouselComponent implements AfterViewInit {
       this.updateDots();
       this.emblaApi.on('select', this.updateCurrentSlide.bind(this));
       this.emblaApi.on('reInit', this.updateDots.bind(this));
+      this.cdr.detectChanges();
     }
   }
 
@@ -46,7 +55,9 @@ export class CarouselComponent implements AfterViewInit {
   }
 
   updateCurrentSlide() {
-    this.currentSlide = this.emblaApi?.selectedScrollSnap() || 0;
+    this.ngZone.run(() => {
+      this.currentSlide = this.emblaApi?.selectedScrollSnap() || 0;
+    });
   }
 
   scrollTo(index: number) {
