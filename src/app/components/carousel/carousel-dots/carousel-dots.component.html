@@ -1,0 +1,18 @@
+<div
+  [class]="dotsContainerClass"
+  class="absolute flex justify-center -translate-x-1/2 left-1/2 bottom-4 md:bottom-2">
+  @if (numberOfSlides > 1) {
+  @for (dot of dots; track $index; let i = $index) {
+  <button
+    class="mx-1 h-1.5 xl:h-2.5 w-1.5 xl:w-2.5 rounded-full p-0"
+    [ngClass]="{
+              'scale-125 transform bg-red-400 hover:bg-red-400 border border-white': i === currentSlide,
+              'bg-gray-300 hover:bg-gray-300': i !== currentSlide
+            }"
+    [attr.aria-label]="'Go to slide ' + (i + 1)"
+    (click)="handleClick(i)"></button>
+  }
+  } @else {
+  <ng-template #noDots></ng-template>
+  }
+</div>

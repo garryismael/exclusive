@@ -110,19 +110,6 @@
   font-style: italic;
 }
 
-.embla {
-  overflow: hidden;
-}
-
-.embla__container {
-  display: flex;
-}
-
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-}
-
 :root {
   /* Success Colors */
   --success-50: #ECFDF5;
@@ -217,7 +204,7 @@
 }
 
 .top {
-  @apply z-40 left-0 right-0 flex flex-row items-center justify-center h-20 gap-2 text-xs text-center bg-black text-zinc-50;
+  @apply left-0 right-0 z-40 flex flex-row items-center justify-center h-20 gap-2 text-xs text-center bg-black text-zinc-50;
 }
 
 .wrapper {
@@ -233,6 +220,6 @@
   }
 
   .title {
-    @apply border-l-8 border-l-red-400 text-red-400 pl-4 text-left w-full font-bold text-sm;
+    @apply w-full pl-4 text-sm font-bold text-left text-red-400 border-l-8 border-l-red-400;
   }
 }

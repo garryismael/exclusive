@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import {
-  AfterContentInit,
   AfterViewInit,
   Component,
   Input,
@@ -13,22 +12,37 @@ import {
 } from 'embla-carousel-angular';
 import Autoplay from 'embla-carousel-autoplay';
 import { ChangeDetectorRef } from '@angular/core';
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { heroChevronLeft, heroChevronRight } from '@ng-icons/heroicons/outline';
+import { CarouselDotsComponent } from './carousel-dots/carousel-dots.component';
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [CommonModule, EmblaCarouselDirective],
+  imports: [
+    CommonModule,
+    EmblaCarouselDirective,
+    NgIconComponent,
+    CarouselDotsComponent,
+  ],
+  providers: [provideIcons({ heroChevronLeft, heroChevronRight })],
   templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.css',
+  styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements AfterViewInit {
   @ViewChild(EmblaCarouselDirective) emblaRef!: EmblaCarouselDirective;
 
   @Input()
-  useDot: boolean = false;
+  useDots: boolean = false;
+
+  @Input()
+  useScrollButton = false;
 
   @Input()
   dotsContainerClass: string = '';
+
+  @Input()
+  containerClass: string = '';
 
   private emblaApi?: EmblaCarouselType;
   public options = { loop: false };

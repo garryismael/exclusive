@@ -2,126 +2,13 @@
   <div
     class="grid grid-cols-1 md:grid-cols-[35%_65%] xl:grid-cols-[20%_80%] place-items-center md:place-items-start gap-6  h-full  wrapper">
     <div class="bg-black text-white w-full md:h-full xl:h-[344px]">
-      <app-carousel [useDot]="true">
-        <div embla-slide class="embla__slide">
-          <div class="p-1 md:h-full">
-            <div
-              class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 md:h-full px-3 xl:justify-around pt-6 text-cyan-50">
-              <div
-                class="flex flex-col md:items-start items-center justify-center gap-5">
-                <div class="flex items-center gap-4">
-                  <ng-icon name="faBrandApple" size="32" />
-                  <p class="text-xs">iPhone 14 Series</p>
-                </div>
-                <h1 class="text-4xl text-center md:text-left">
-                  Up to 10% off Voucher
-                </h1>
-                <div class="flex items-center gap-1">
-                  <a
-                    href="#"
-                    class="text-xs pb-0.5 border-b border-b-cyan-50">
-                    Shop now
-                  </a>
-                  <ng-icon name="faSolidArrowRight" size="32" />
-                </div>
-              </div>
-              <img
-                alt="apple"
-                src="/images/apple.png"
-                class="w-60 h-52 xl:w-[400px] xl:h-80" />
-            </div>
-          </div>
-        </div>
-        <div embla-slide class="embla__slide">
-          <div class="p-1 md:h-full">
-            <div
-              class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 md:h-full xl:justify-around px-3 pt-6 text-cyan-50">
-              <div
-                class="flex flex-col md:items-start items-center justify-center gap-5">
-                <div class="flex items-center gap-4">
-                  <ng-icon name="faBrandApple" size="32" />
-                  <p class="text-xs">iPhone 14 Series</p>
-                </div>
-                <h1 class="text-4xl text-center md:text-left">
-                  Up to 10% off Voucher
-                </h1>
-                <div class="flex items-center gap-1">
-                  <a
-                    href="#"
-                    class="text-xs pb-0.5 border-b border-b-cyan-50">
-                    Shop now
-                  </a>
-                  <ng-icon name="faSolidArrowRight" size="32" />
-                </div>
-              </div>
-              <img
-                alt="apple"
-                src="/images/apple.png"
-                class="w-60 h-52 xl:w-[400px] xl:h-80" />
-            </div>
-          </div>
-        </div>
-        <div embla-slide class="embla__slide">
-          <div class="p-1 md:h-full">
-            <div
-              class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 md:h-full xl:justify-around px-3 pt-6 text-cyan-50">
-              <div
-                class="flex flex-col md:items-start items-center justify-center gap-5">
-                <div class="flex items-center gap-4">
-                  <ng-icon name="faBrandApple" size="32" />
-                  <p class="text-xs">iPhone 14 Series</p>
-                </div>
-                <h1 class="text-4xl text-center md:text-left">
-                  Up to 10% off Voucher
-                </h1>
-                <div class="flex items-center gap-1">
-                  <a
-                    href="#"
-                    class="text-xs pb-0.5 border-b border-b-cyan-50">
-                    Shop now
-                  </a>
-                  <ng-icon name="faSolidArrowRight" size="32" />
-                </div>
-              </div>
-              <img
-                alt="apple"
-                src="/images/apple.png"
-                class="w-60 h-52 xl:w-[400px] xl:h-80" />
-            </div>
-          </div>
-        </div>
-        <div embla-slide class="embla__slide">
-          <div class="p-1 md:h-full">
-            <div
-              class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 md:h-full xl:justify-around px-3 pt-6 text-cyan-50">
-              <div
-                class="flex flex-col md:items-start items-center justify-center gap-5">
-                <div class="flex items-center gap-4">
-                  <ng-icon name="faBrandApple" size="32" />
-                  <p class="text-xs">iPhone 14 Series</p>
-                </div>
-                <h1 class="text-4xl text-center md:text-left">
-                  Up to 10% off Voucher
-                </h1>
-                <div class="flex items-center gap-1">
-                  <a
-                    href="#"
-                    class="text-xs pb-0.5 border-b border-b-cyan-50">
-                    Shop now
-                  </a>
-                  <ng-icon name="faSolidArrowRight" size="32" />
-                </div>
-              </div>
-              <img
-                alt="apple"
-                src="/images/apple.png"
-                class="w-60 h-52 xl:w-[400px] xl:h-80" />
-            </div>
-          </div>
-        </div>
+      <app-carousel [useDots]="true">
+        @for (item of items; track $index) {
+        <app-product-carousel-item />
+        }
       </app-carousel>
     </div>
-    <div class="w-full flex flex-col gap-4 px-4 xl:pl-0 md:order-first">
+    <div class="flex flex-col w-full gap-4 px-4 xl:pl-0 md:order-first">
       <div class="flex items-center justify-between gap-1">
         <p>Woman’s Fashion</p>
         <ng-icon name="faSolidChevronRight" />
