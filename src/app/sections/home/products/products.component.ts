@@ -1,13 +1,64 @@
-import { Component } from '@angular/core';
-import { ProductComponent } from '../../../components/product/product.component';
+import { ProductComponent } from '@/app/components/product/product.component';
+import { ChangeDetectorRef, Component, NgZone, ViewChild } from '@angular/core';
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { heroArrowLeft, heroArrowRight } from '@ng-icons/heroicons/outline';
+import {
+  EmblaCarouselDirective,
+  EmblaCarouselType,
+} from 'embla-carousel-angular';
 
 @Component({
   selector: 'products-section',
   standalone: true,
-  imports: [ProductComponent],
+  imports: [NgIconComponent, EmblaCarouselDirective, ProductComponent],
+  providers: [provideIcons({heroArrowRight, heroArrowLeft})],
   templateUrl: './products.component.html',
-  styleUrl: './products.component.css'
+  styleUrl: './products.component.css',
 })
 export class ProductsSection {
+  @ViewChild(EmblaCarouselDirective) emblaRef!: EmblaCarouselDirective;
 
+  private emblaApi?: EmblaCarouselType;
+  public options = { loop: false };
+  public dots: number[] = [];
+  public currentSlide: number = 0;
+  public items = Array.from({ length: 5 });
+  constructor(public ngZone: NgZone, private cdr: ChangeDetectorRef) {}
+
+  ngAfterViewInit(): void {
+    this.emblaApi = this.emblaRef.emblaApi;
+
+    if (this.emblaApi) {
+      this.emblaApi.on('select', this.updateCurrentSlide.bind(this));
+      this.cdr.detectChanges();
+    }
+  }
+
+  updateCurrentSlide() {
+    this.ngZone.run(() => {
+      this.currentSlide = this.emblaApi?.selectedScrollSnap() || 0;
+    });
+  }
+
+  scrollTo(index: number) {
+    this.ngZone.runOutsideAngular(() => {
+      this.emblaApi?.scrollTo(index);
+    });
+  }
+
+  scrollNext() {
+    this.ngZone.runOutsideAngular(() => {
+      this.emblaRef.scrollNext();
+    });
+  }
+
+  scrollPrev() {
+    this.ngZone.runOutsideAngular(() => {
+      this.emblaRef.scrollPrev();
+    });
+  }
+
+  get numberOfSlides() {
+    return this.dots.length;
+  }
 }

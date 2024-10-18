@@ -1,0 +1,20 @@
+<div class='relative h-full embla'>
+  <div class="embla__viewport" emblaCarousel
+    [options]="options" [plugins]="plugins">
+    <div class="embla__container">
+      @for (item of items; track $index) {
+      <div class="embla__slide">
+        <app-product-carousel-item />
+      </div>
+      }
+    </div>
+  </div>
+
+  <!-- Dots, visible if useDots is true -->
+  <app-carousel-dots
+    [currentSlide]="currentSlide"
+    [dots]="dots"
+    [numberOfSlides]="numberOfSlides"
+    (scrollTo)="scrollTo($event)">
+  </app-carousel-dots>
+</div>
