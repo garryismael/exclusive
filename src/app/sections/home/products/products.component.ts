@@ -6,12 +6,13 @@ import {
   EmblaCarouselDirective,
   EmblaCarouselType,
 } from 'embla-carousel-angular';
+import { ProductsService } from './products.service';
 
 @Component({
   selector: 'products-section',
   standalone: true,
   imports: [NgIconComponent, EmblaCarouselDirective, ProductComponent],
-  providers: [provideIcons({heroArrowRight, heroArrowLeft})],
+  providers: [provideIcons({ heroArrowRight, heroArrowLeft })],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
 })
@@ -23,7 +24,12 @@ export class ProductsSection {
   public dots: number[] = [];
   public currentSlide: number = 0;
   public items = Array.from({ length: 5 });
-  constructor(public ngZone: NgZone, private cdr: ChangeDetectorRef) {}
+
+  constructor(
+    public productService: ProductsService,
+    public ngZone: NgZone,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngAfterViewInit(): void {
     this.emblaApi = this.emblaRef.emblaApi;

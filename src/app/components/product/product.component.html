@@ -11,17 +11,19 @@
         <ng-icon name="heroEye" size="24" />
       </button>
     </div>
-    <img src="/images/gamepad.png" class="self-center w-40 h-36" />
+    <div class="relative flex items-center justify-center w-32 h-32 mx-auto">
+      <img [src]="product.image" class="object-fill " />
+    </div>
     <button
       class="absolute bottom-0 left-0 right-0 hidden py-2 text-sm text-white bg-black group-hover:block group-focus:block">Add
       To Cart</button>
   </div>
   <h2 class="mt-4 text-base font-semibold">
-    HAVIT HV-G92 Gamepad
+    {{product.name}}
   </h2>
   <div class="flex items-center gap-2 my-2">
-    <p class="text-error-400">$120</p>
-    <p class="text-gray-500 line-through">$160</p>
+    <p class="text-error-400">${{product.price}}</p>
+    <p class="text-gray-500 line-through">${{product.previousPrice}}</p>
   </div>
   <div class="flex items-center gap-2">
     <div class="flex items-center">

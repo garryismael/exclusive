@@ -3,7 +3,7 @@
 }
 .embla__container {
   display: flex;
-  @apply md:gap-4;
+  @apply md:gap-4 xl:gap-8;
 }
 
 .embla__slide {

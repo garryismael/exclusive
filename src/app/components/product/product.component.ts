@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Product } from '@/app/models/product.model';
+import { Component, Input } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroHeart, heroEye } from '@ng-icons/heroicons/outline';
 import { heroStarSolid } from '@ng-icons/heroicons/solid';
@@ -11,4 +12,9 @@ import { heroStarSolid } from '@ng-icons/heroicons/solid';
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
 })
-export class ProductComponent {}
+export class ProductComponent {
+  @Input({
+    required: true,
+  })
+  product!: Product;
+}

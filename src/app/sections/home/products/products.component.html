@@ -37,9 +37,9 @@
       <div class="embla__viewport" emblaCarousel
         [options]="options">
         <div class="embla__container">
-          @for (item of items; track $index) {
+          @for (product of productService.products; track $index) {
           <div class="embla__slide">
-            <app-product />
+            <app-product [product]="product"/>
           </div>
           }
         </div>
