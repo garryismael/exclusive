@@ -8,6 +8,7 @@ import { ProductsSection } from '../../sections/home/products/products.component
 import { HeroProductsCarouselComponent } from '@/app/sections/home/hero-products-carousel/hero-products-carousel.component';
 import { CategoriesComponent } from '@/app/sections/home/categories/categories.component';
 import { BestSellingProductsComponent } from '@/app/sections/home/best-selling-products/best-selling-products.component';
+import { FlashSaleBannerComponent } from '@/app/sections/home/flash-sale-banner/flash-sale-banner.component';
 
 @Component({
   selector: 'app-home',
@@ -17,11 +18,10 @@ import { BestSellingProductsComponent } from '@/app/sections/home/best-selling-p
     ProductsSection,
     HeroProductsCarouselComponent,
     CategoriesComponent,
-    BestSellingProductsComponent
+    BestSellingProductsComponent,
+    FlashSaleBannerComponent,
   ],
-  providers: [
-    provideIcons({ faSolidArrowRight, faSolidChevronRight }),
-  ],
+  providers: [provideIcons({ faSolidArrowRight, faSolidChevronRight })],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
