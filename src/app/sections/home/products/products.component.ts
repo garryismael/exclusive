@@ -9,7 +9,7 @@ import {
 import { ProductsService } from './products.service';
 
 @Component({
-  selector: 'flash-sales-products-section',
+  selector: 'products-section',
   standalone: true,
   imports: [NgIconComponent, EmblaCarouselDirective, ProductComponent],
   providers: [provideIcons({ heroArrowRight, heroArrowLeft })],

@@ -1,1 +1,29 @@
-<p>Product works</p>
+<div
+  class="px-3 lg:px-4 wrapper 2xl:px-0 pt-5 lg:pt-10  pb-9 lg:pb-16 border-b-[0.5px] border-b-gray-500">
+  <h1 class="my-6 title">Our products</h1>
+  <div
+    class="flex justify-between gap-4 items-center">
+    <h3 class="text-lg font-semibold xl:text-2xl text-nowrap">Explore Our
+      Products</h3>
+    <div class="flex items-center gap-4 justify-end w-full md:w-fit">
+      <button (click)="scrollPrev()" class="arrow">
+        <ng-icon name="heroArrowLeft" class="text-sm" />
+      </button>
+      <button (click)="scrollNext()" class="arrow">
+        <ng-icon name="heroArrowRight" class="text-sm" />
+      </button>
+    </div>
+  </div>
+  <div class='relative h-full embla mt-5'>
+    <div class="embla__viewport" emblaCarousel
+      [options]="options">
+      <div class="embla__container">
+        @for (product of productService.products; track $index) {
+        <div class="embla__slide">
+          <app-product [product]="product" />
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

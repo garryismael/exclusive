@@ -10,6 +10,7 @@ import { CategoriesComponent } from '@/app/sections/home/categories/categories.c
 import { BestSellingProductsComponent } from '@/app/sections/home/best-selling-products/best-selling-products.component';
 import { FlashSaleBannerComponent } from '@/app/sections/home/flash-sale-banner/flash-sale-banner.component';
 import { FlashSalesProductsComponents } from '@/app/sections/home/flash-sales-products/flash-sales-products.component';
+import { ProductComponent } from '../../components/product/product.component';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,8 @@ import { FlashSalesProductsComponents } from '@/app/sections/home/flash-sales-pr
     CategoriesComponent,
     BestSellingProductsComponent,
     FlashSaleBannerComponent,
+    ProductComponent,
+    ProductsSection,
   ],
   providers: [provideIcons({ faSolidArrowRight, faSolidChevronRight })],
   templateUrl: './home.component.html',
