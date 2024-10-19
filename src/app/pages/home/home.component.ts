@@ -7,6 +7,7 @@ import {
 import { ProductsSection } from '../../sections/home/products/products.component';
 import { HeroProductsCarouselComponent } from '@/app/sections/home/hero-products-carousel/hero-products-carousel.component';
 import { CategoriesComponent } from '@/app/sections/home/categories/categories.component';
+import { BestSellingProductsComponent } from '@/app/sections/home/best-selling-products/best-selling-products.component';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ import { CategoriesComponent } from '@/app/sections/home/categories/categories.c
     NgIconComponent,
     ProductsSection,
     HeroProductsCarouselComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    BestSellingProductsComponent
   ],
   providers: [
     provideIcons({ faSolidArrowRight, faSolidChevronRight }),

@@ -1,0 +1,17 @@
+<div
+  class="px-3 lg:px-4 wrapper 2xl:px-0 pt-5 lg:pt-10 pb-9">
+  <h1 class="my-6 title">This month</h1>
+  <div
+    class="flex justify-between gap-4 items-center flex-wrap md:flex-nowrap md:mb-4">
+    <h3 class="text-lg font-semibold xl:text-2xl text-nowrap">Best Selling
+      Products</h3>
+    <div class="w-full flex items-center justify-end mb-4 md:mb-0">
+      <button class="text-white bg-red-400 px-12 py-4 rounded">View All</button>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:justify-between">
+    @for (product of bestProducts; track $index) {
+    <app-product [product]="product" [reduction]="false"/>
+    }
+  </div>
+</div>

@@ -18,4 +18,7 @@ export class ProductComponent {
     required: true,
   })
   product!: Product;
+
+  @Input()
+  reduction: boolean = true;
 }
