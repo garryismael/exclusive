@@ -1,0 +1,3 @@
+.square {
+  @apply w-[170px] h-[145px] border border-black border-opacity-30 flex flex-col items-center justify-center rounded-md hover:bg-[#DB4444] hover:text-white;
+}

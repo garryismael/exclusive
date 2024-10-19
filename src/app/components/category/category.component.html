@@ -1,5 +1,6 @@
 <div
-  class="w-[170px] h-[145px] border border-black border-opacity-30 flex flex-col items-center justify-center rounded-md hover:bg-[#DB4444] hover:text-white">
-  <img [src]="category.image" [alt]="category.name" width="56" height="56" />
+  class="square">
+  <img [ngSrc]="category.image" [alt]="category.name" width="56" height="56"
+    priority />
   <span class="text-base">{{category.name}}</span>
 </div>
