@@ -6,6 +6,7 @@ import {
 } from '@ng-icons/font-awesome/solid';
 import { ProductsSection } from '../../sections/home/products/products.component';
 import { HeroProductsCarouselComponent } from '@/app/sections/home/hero-products-carousel/hero-products-carousel.component';
+import { CategoriesComponent } from '@/app/sections/home/categories/categories.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ import { HeroProductsCarouselComponent } from '@/app/sections/home/hero-products
     NgIconComponent,
     ProductsSection,
     HeroProductsCarouselComponent,
+    CategoriesComponent
   ],
   providers: [
     provideIcons({ faSolidArrowRight, faSolidChevronRight }),
