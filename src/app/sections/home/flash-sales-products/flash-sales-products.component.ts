@@ -6,17 +6,17 @@ import {
   EmblaCarouselDirective,
   EmblaCarouselType,
 } from 'embla-carousel-angular';
-import { ProductsService } from './products.service';
+import { ProductsService } from '../products/products.service';
 
 @Component({
   selector: 'flash-sales-products-section',
   standalone: true,
   imports: [NgIconComponent, EmblaCarouselDirective, ProductComponent],
   providers: [provideIcons({ heroArrowRight, heroArrowLeft })],
-  templateUrl: './products.component.html',
-  styleUrl: './products.component.css',
+  templateUrl: './flash-sales-products.component.html',
+  styleUrl: './flash-sales-products.component.css',
 })
-export class ProductsSection {
+export class FlashSalesProductsComponents {
   @ViewChild(EmblaCarouselDirective) emblaRef!: EmblaCarouselDirective;
 
   private emblaApi?: EmblaCarouselType;
