@@ -23,7 +23,6 @@ export class ProductsSection {
   public options = { loop: false };
   public dots: number[] = [];
   public currentSlide: number = 0;
-  public items = Array.from({ length: 5 });
 
   constructor(
     public productService: ProductsService,
