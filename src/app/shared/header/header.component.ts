@@ -9,5 +9,6 @@ import { heroHeart, heroShoppingCart, heroBars3BottomRight } from '@ng-icons/her
   standalone: true,
   selector: 'app-header',
   templateUrl: './header.component.html',
+  styleUrl: './header.component.css'
 })
 export class HeaderComponent {}

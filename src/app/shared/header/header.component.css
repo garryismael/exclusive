@@ -1,0 +1,3 @@
+.top {
+  @apply left-0 right-0 z-40 flex flex-row items-center justify-center h-20 gap-2 text-xs text-center bg-black text-zinc-50 xl:pr-6;
+}

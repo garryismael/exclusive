@@ -203,14 +203,12 @@
   --red-900: #C77414;
 }
 
-.top {
-  @apply left-0 right-0 z-40 flex flex-row items-center justify-center h-20 gap-2 text-xs text-center bg-black text-zinc-50;
-}
-
 .wrapper {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+
+  @apply lg:px-6;
 }
 
 @layer base {
