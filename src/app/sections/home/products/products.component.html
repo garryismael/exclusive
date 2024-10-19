@@ -1,33 +1,36 @@
 <div class="px-3 lg:px-4 wrapper 2xl:px-0">
   <h1 class="my-6 title">Today's</h1>
   <div
-    class="flex flex-col justify-between gap-4 xl:flex-row md:flex-row md:items-center sm:justify-start sm:gap-4">
+    class="flex flex-col justify-between gap-4 xl:flex-row md:flex-row md:items-center sm:justify-start sm:gap-4 lg:gap-20">
     <h3 class="text-lg font-semibold xl:text-2xl text-nowrap">Flash Sales</h3>
     <div class="flex flex-wrap items-center justify-between gap-2 md:w-full">
-      <div class="flex items-center gap-4">
+      <div class="flex items-center font-medium">
         <div class="flex flex-col gap-1">
           <span class="text-xs">Days</span>
-          <span class="text-lg">03</span>
+          <span class="text-lg font-semibold">03</span>
         </div>
+        <span class="px-3 text-red-400">:</span>
         <div class="flex flex-col gap-1">
           <span class="text-xs">Hours</span>
-          <span class="text-lg">23</span>
+          <span class="text-lg font-semibold">23</span>
         </div>
+        <span class="px-3 text-red-400">:</span>
         <div class="flex flex-col gap-1">
           <span class="text-xs">Minutes</span>
-          <span class="text-lg">19</span>
+          <span class="text-lg font-semibold">19</span>
         </div>
+        <span class="px-3 text-red-400">:</span>
         <div class="flex flex-col gap-1">
           <span class="text-xs">Seconds</span>
-          <span class="text-lg">56</span>
+          <span class="text-lg font-semibold">56</span>
         </div>
       </div>
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-4 justify-end w-full md:w-fit">
         <button (click)="scrollPrev()" class="arrow">
-          <ng-icon name="heroArrowLeft" size="20"/>
+          <ng-icon name="heroArrowLeft" class="text-sm"/>
         </button>
         <button (click)="scrollNext()" class="arrow">
-          <ng-icon name="heroArrowRight" size="20"/>
+          <ng-icon name="heroArrowRight" class="text-sm"/>
         </button>
       </div>
     </div>
