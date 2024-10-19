@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { faBrandApple } from '@ng-icons/font-awesome/brands';
@@ -9,7 +10,7 @@ import {
 @Component({
   selector: 'app-product-carousel-item',
   standalone: true,
-  imports: [NgIconComponent],
+  imports: [NgOptimizedImage, NgIconComponent],
   providers: [
     provideIcons({ faBrandApple, faSolidArrowRight, faSolidChevronRight }),
   ],

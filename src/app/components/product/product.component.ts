@@ -1,4 +1,5 @@
 import { Product } from '@/app/models/product.model';
+import { NgOptimizedImage } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroHeart, heroEye } from '@ng-icons/heroicons/outline';
@@ -7,7 +8,7 @@ import { heroStarSolid } from '@ng-icons/heroicons/solid';
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [NgIconComponent],
+  imports: [NgIconComponent, NgOptimizedImage],
   providers: [provideIcons({ heroHeart, heroEye, heroStarSolid })],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
