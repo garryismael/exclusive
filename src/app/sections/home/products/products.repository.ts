@@ -82,4 +82,71 @@ export class ProductRepository {
       numberOfStars: 65,
     },
   ];
+
+  public allProducts: Product[] = [
+    {
+      name: 'Breed Dry Dog Food',
+      price: 100,
+      previousPrice: 0,
+      image: '/images/products/cesar.png',
+      ratings: 3,
+      numberOfStars: 35,
+    },
+    {
+      name: 'CANON EOS DSLR Camera',
+      price: 360,
+      previousPrice: 0,
+      image: '/images/products/camera.png',
+      ratings: 4,
+      numberOfStars: 95,
+    },
+    {
+      name: 'ASUS FHD Gaming Laptop',
+      price: 700,
+      previousPrice: 0,
+      image: '/images/products/laptop.png',
+      ratings: 5,
+      numberOfStars: 325,
+    },
+    {
+      name: 'Curology Product Set ',
+      price: 500,
+      previousPrice: 0,
+      image: '/images/products/curology.png',
+      ratings: 5,
+      numberOfStars: 65,
+    },
+    {
+      name: 'Kids Electric Car',
+      price: 960,
+      previousPrice: 0,
+      image: '/images/products/electric-car.png',
+      ratings: 5,
+      numberOfStars: 65,
+    },
+    {
+      name: 'Jr. Zoom Soccer Cleats',
+      price: 1160,
+      previousPrice: 0,
+      image: '/images/products/boots.png',
+      ratings: 5,
+      numberOfStars: 35,
+    },
+    {
+      name: 'GP11 Shooter USB Gamepad',
+      price: 660,
+      previousPrice: 0,
+      image: '/images/products/gamepad.png',
+      ratings: 5,
+      numberOfStars: 55,
+    },
+    {
+      name: 'Quilted Satin Jacket',
+      price: 660,
+      previousPrice: 0,
+      image: '/images/products/jacket.png',
+      ratings: 4.5,
+      numberOfStars: 55,
+    },
+  ];
 }

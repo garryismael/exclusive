@@ -2,8 +2,8 @@
   overflow: hidden;
 }
 .embla__container {
-  display: flex;
-  @apply md:gap-4 xl:gap-8;
+  @apply flex;
+  @apply lg:grid lg:grid-rows-2 w-full lg:grid-flow-col gap-2 lg:gap-y-8 auto-cols-[80%] lg:auto-cols-[23%] lg:justify-between;
 }
 
 .embla__slide {
@@ -14,5 +14,5 @@
 }
 
 .arrow {
-  @apply flex items-center justify-center w-10 h-10 md:w-12 md:h-12 p-2 rounded-full bg-slate-200;
+  @apply flex items-center justify-center w-10 h-10 p-2 rounded-full md:w-12 md:h-12 bg-slate-200;
 }

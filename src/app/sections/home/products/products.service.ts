@@ -14,4 +14,8 @@ export class ProductsService {
   get bestProducts() {
     return this.repository.bestProducts;
   }
+
+  get allProducts() {
+    return this.repository.allProducts;
+  }
 }
