@@ -148,5 +148,21 @@ export class ProductRepository {
       ratings: 4.5,
       numberOfStars: 55,
     },
+    {
+      name: 'Bouclé wool jacquard shirt',
+      price: 3900,
+      previousPrice: 0,
+      image: '/images/products/jacket-red.png',
+      ratings: 5,
+      numberOfStars: 86,
+    },
+    {
+      name: 'GG print cotton jacket',
+      price: 3200,
+      previousPrice: 0,
+      image: '/images/products/bombers.png',
+      ratings: 5,
+      numberOfStars: 96,
+    },
   ];
 }

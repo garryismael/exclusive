@@ -25,7 +25,7 @@
           <span class="text-lg font-semibold">56</span>
         </div>
       </div>
-      <div class="flex items-center gap-4 justify-end w-full md:w-fit">
+      <div class="flex items-center justify-end w-full gap-4 md:w-fit">
         <button (click)="scrollPrev()" class="arrow">
           <ng-icon name="heroArrowLeft" class="text-sm"/>
         </button>
@@ -42,7 +42,7 @@
         <div class="embla__container">
           @for (product of productService.products; track $index) {
           <div class="embla__slide">
-            <app-product [product]="product"/>
+            <app-product [product]="product" [reduction]="false"/>
           </div>
           }
         </div>

@@ -3,7 +3,7 @@
 }
 .embla__container {
   @apply flex;
-  @apply lg:grid lg:grid-rows-2 w-full lg:grid-flow-col gap-2 lg:gap-y-8 auto-cols-[80%] lg:auto-cols-[23%] lg:justify-between;
+  @apply lg:grid lg:grid-rows-2 w-full lg:grid-flow-col gap-2 lg:gap-y-8 auto-cols-[80%] lg:auto-cols-[23%] lg:gap-8 lg:justify-between;
 }
 
 .embla__slide {
