@@ -42,4 +42,15 @@
     </div>
     <p>(88)</p>
   </div>
+  <div class="flex flex-wrap items-center gap-1 mt-2">
+    @for (variant of variants; track $index) {
+    <div
+      [ngStyle]="getVariantStyles($index)"
+      (click)="selectVariant($index)"
+      class='relative flex items-center justify-center w-5 h-5 rounded-full'>
+      <span [ngStyle]="getInnerStyles(variant, $index)"
+        class="absolute rounded-full"></span>
+    </div>
+    }
+  </div>
 </div>

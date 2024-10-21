@@ -123,6 +123,20 @@ export class ProductRepository {
       image: '/images/products/electric-car.png',
       ratings: 5,
       numberOfStars: 65,
+      variants: [
+        {
+          color: "#000",
+          image: '/images/products/toyota-black.png',
+          previousPrice: 0,
+          price: 960
+        },
+        {
+          color: "#28CC85",
+          image: "/images/products/toyota-green.png",
+          previousPrice: 0,
+          price: 960
+        },
+      ]
     },
     {
       name: 'Jr. Zoom Soccer Cleats',
@@ -131,6 +145,20 @@ export class ProductRepository {
       image: '/images/products/boots.png',
       ratings: 5,
       numberOfStars: 35,
+      variants: [
+        {
+          color: "#000",
+          image: '/images/products/copa-black.png',
+          previousPrice: 0,
+          price: 1160
+        },
+        {
+          color: "#fff",
+          image: "/images/products/white-green.png",
+          previousPrice: 0,
+          price: 1160
+        },
+      ]
     },
     {
       name: 'GP11 Shooter USB Gamepad',
@@ -139,6 +167,14 @@ export class ProductRepository {
       image: '/images/products/gamepad.png',
       ratings: 5,
       numberOfStars: 55,
+      variants: [
+        {
+          color: "#1A8120",
+          image: "/images/gamepad-green.png",
+          previousPrice: 0,
+          price: 660
+        },
+      ]
     },
     {
       name: 'Quilted Satin Jacket',
@@ -147,14 +183,30 @@ export class ProductRepository {
       image: '/images/products/jacket.png',
       ratings: 4.5,
       numberOfStars: 55,
+      variants: [
+        {
+          color: "#000",
+          image: "/images/jacket-black.png",
+          previousPrice: 0,
+          price: 660
+        },
+      ]
     },
     {
       name: 'Bouclé wool jacquard shirt',
       price: 3900,
       previousPrice: 0,
-      image: '/images/products/jacket-red.png',
+      image: '/images/products/jacket-green.png',
       ratings: 5,
       numberOfStars: 86,
+      variants: [
+        {
+          color: "#53252B",
+          image: '/images/products/jacket-green.png',
+          previousPrice: 0,
+          price: 3900
+        },
+      ]
     },
     {
       name: 'GG print cotton jacket',
@@ -163,6 +215,14 @@ export class ProductRepository {
       image: '/images/products/bombers.png',
       ratings: 5,
       numberOfStars: 96,
+      variants: [
+        {
+          color: "#fff",
+          image: '/images/products/bombers-white.png',
+          previousPrice: 0,
+          price: 3900
+        },
+      ]
     },
   ];
 }

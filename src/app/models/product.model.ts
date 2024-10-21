@@ -2,8 +2,9 @@ export interface ProductVariant {
   image: string;
   color: string;
   price: number;
-  previousPrice: string;
+  previousPrice: number;
 }
+
 export interface Product {
   name: string;
   price: number;
