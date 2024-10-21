@@ -1,6 +1,6 @@
 import { Product, ProductVariant } from '@/app/models/product.model';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroHeart, heroEye } from '@ng-icons/heroicons/outline';
 import { heroStarSolid } from '@ng-icons/heroicons/solid';
@@ -13,7 +13,7 @@ import { heroStarSolid } from '@ng-icons/heroicons/solid';
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit {
   @Input({
     required: true,
   })
@@ -22,41 +22,52 @@ export class ProductComponent {
   @Input()
   reduction: boolean = true;
 
-  selectedIndex: number | null = null;
+  selectedVariant: ProductVariant | null = null;
 
-  selectVariant(index: number) {
-    this.selectedIndex = index;
-  }
-
-  get variants() {
-    if (this.product.variants) {
-      return this.product.variants;
+  ngOnInit(): void {
+    if (this.product.variants && this.product.variants.length > 1) {
+      this.selectedVariant = this.product.variants[0];
     }
-    return [];
   }
 
-  getVariantStyles(index: number): { [kclass: string]: string } {
-    const selected = this.selectedIndex === index;
+  selectVariant(variant: ProductVariant) {
+    this.selectedVariant = variant;
+  }
+
+  get currentVariant() {
+    if (this.product.variants && this.product.variants.length > 1) {
+      return this.selectedVariant
+        ? this.selectedVariant
+        : this.product.variants[0];
+    }
+    return {
+      image: this.product.image,
+      color: '', // no colors
+      price: this.product.price,
+      previousPrice: this.product.previousPrice,
+    };
+  }
+
+  getVariantStyles(variant: ProductVariant): { [kclass: string]: string } {
+    const selected = this.selectedVariant === variant;
     return selected ? { 'background-color': '#000' } : {};
   }
 
-  getInnerStyles(
-    variant: ProductVariant,
-    index: number
-  ): { [kclass: string]: string } {
+  getInnerStyles(variant: ProductVariant): { [kclass: string]: string } {
     const isWhiteBackground =
       variant.color === '#fff' || variant.color.toLowerCase() === 'white';
-    if (this.selectedIndex != index) {
+    const selected = this.selectedVariant === variant;
+    if (!selected) {
       return {
         'background-color': variant.color,
-        width: '20px',
-        height: '20px',
+        width: '24px',
+        height: '24px',
         border: isWhiteBackground ? '1px solid #ccc' : 'none',
       };
     }
     return {
-      width: '16px',
-      height: '16px',
+      width: '20px',
+      height: '20px',
       'background-color': variant.color,
       border: isWhiteBackground ? '3px solid #ccc' : '3px solid #fff',
     };

@@ -16,7 +16,7 @@
       </button>
     </div>
     <div class="relative flex items-center justify-center w-32 h-32 mx-auto">
-      <img [ngSrc]="product.image" [alt]="product.name" class="object-contain"
+      <img [ngSrc]="currentVariant.image" [alt]="product.name" class="object-contain"
         fill />
     </div>
     <button
@@ -27,9 +27,9 @@
     {{product.name}}
   </h2>
   <div class="flex items-center gap-2 my-2">
-    <p class="text-error-400">${{product.price}}</p>
-    @if (product.previousPrice > 0) {
-    <p class="text-gray-500 line-through">${{product.previousPrice}}</p>
+    <p class="text-error-400">${{currentVariant.price}}</p>
+    @if (currentVariant.previousPrice > 0) {
+    <p class="text-gray-500 line-through">${{currentVariant.previousPrice}}</p>
     }
   </div>
   <div class="flex items-center gap-2">
@@ -43,14 +43,16 @@
     <p>(88)</p>
   </div>
   <div class="flex flex-wrap items-center gap-1 mt-2">
-    @for (variant of variants; track $index) {
+    @if (product.variants && product.variants.length > 1) {
+    @for (variant of product.variants; track $index) {
     <div
-      [ngStyle]="getVariantStyles($index)"
-      (click)="selectVariant($index)"
-      class='relative flex items-center justify-center w-5 h-5 rounded-full'>
-      <span [ngStyle]="getInnerStyles(variant, $index)"
+      [ngStyle]="getVariantStyles(variant)"
+      (click)="selectVariant(variant)"
+      class='relative flex items-center justify-center w-6 h-6 rounded-full'>
+      <span [ngStyle]="getInnerStyles(variant)"
         class="absolute rounded-full"></span>
     </div>
+    }
     }
   </div>
 </div>

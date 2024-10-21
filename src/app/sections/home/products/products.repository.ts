@@ -125,18 +125,24 @@ export class ProductRepository {
       numberOfStars: 65,
       variants: [
         {
-          color: "#000",
-          image: '/images/products/toyota-black.png',
+          image: '/images/products/electric-car.png',
+          color: '#FD4D52',
+          price: 960,
           previousPrice: 0,
-          price: 960
         },
         {
-          color: "#28CC85",
-          image: "/images/products/toyota-green.png",
+          color: '#000',
+          image: '/images/products/toyota-black.png',
           previousPrice: 0,
-          price: 960
+          price: 960,
         },
-      ]
+        {
+          color: '#28CC85',
+          image: '/images/products/toyota-green.png',
+          previousPrice: 0,
+          price: 960,
+        },
+      ],
     },
     {
       name: 'Jr. Zoom Soccer Cleats',
@@ -147,18 +153,24 @@ export class ProductRepository {
       numberOfStars: 35,
       variants: [
         {
-          color: "#000",
-          image: '/images/products/copa-black.png',
+          color: '#F3FE9E',
+          price: 1160,
           previousPrice: 0,
-          price: 1160
+          image: '/images/products/boots.png',
         },
         {
-          color: "#fff",
-          image: "/images/products/white-green.png",
+          color: '#000',
+          image: '/images/products/copa-black.png',
           previousPrice: 0,
-          price: 1160
+          price: 1160,
         },
-      ]
+        {
+          color: '#fff',
+          image: '/images/products/copa-white.png',
+          previousPrice: 0,
+          price: 1160,
+        },
+      ],
     },
     {
       name: 'GP11 Shooter USB Gamepad',
@@ -169,12 +181,18 @@ export class ProductRepository {
       numberOfStars: 55,
       variants: [
         {
-          color: "#1A8120",
-          image: "/images/gamepad-green.png",
+          color: '#C3343B',
+          price: 660,
           previousPrice: 0,
-          price: 660
+          image: '/images/products/gamepad.png',
         },
-      ]
+        {
+          color: '#1A8120',
+          image: '/images/products/gamepad-green.png',
+          previousPrice: 0,
+          price: 660,
+        },
+      ],
     },
     {
       name: 'Quilted Satin Jacket',
@@ -185,12 +203,18 @@ export class ProductRepository {
       numberOfStars: 55,
       variants: [
         {
-          color: "#000",
-          image: "/images/jacket-black.png",
+          color: '#1D3635',
+          price: 660,
           previousPrice: 0,
-          price: 660
+          image: '/images/products/jacket.png',
         },
-      ]
+        {
+          color: '#000',
+          image: '/images/products/jacket-black.png',
+          previousPrice: 0,
+          price: 660,
+        },
+      ],
     },
     {
       name: 'Bouclé wool jacquard shirt',
@@ -201,12 +225,18 @@ export class ProductRepository {
       numberOfStars: 86,
       variants: [
         {
-          color: "#53252B",
-          image: '/images/products/jacket-green.png',
+          color: '#3B3B3B',
+          price: 3900,
           previousPrice: 0,
-          price: 3900
+          image: '/images/products/jacket-green.png',
         },
-      ]
+        {
+          color: '#53252B',
+          image: '/images/products/jacket-red.png',
+          previousPrice: 0,
+          price: 3900,
+        },
+      ],
     },
     {
       name: 'GG print cotton jacket',
@@ -217,12 +247,18 @@ export class ProductRepository {
       numberOfStars: 96,
       variants: [
         {
-          color: "#fff",
+          color: '#878785',
+          price: 3200,
+          previousPrice: 0,
+          image: '/images/products/bombers.png',
+        },
+        {
+          color: '#fff',
           image: '/images/products/bombers-white.png',
           previousPrice: 0,
-          price: 3900
+          price: 3900,
         },
-      ]
+      ],
     },
   ];
 }
