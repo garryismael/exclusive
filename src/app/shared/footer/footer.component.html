@@ -1,0 +1,65 @@
+<footer class="text-white bg-black">
+  <div class="grid justify-between grid-cols-1 lg:grid-cols-[1fr_1fr_0.75fr_0.75fr_1.5fr] md:px-3 lg:auto-cols-[1fr] lg:px-3 lg:grid-flow-col gap-12 place-items-center pt-20 pb-16 wrapper ">
+    <div class="flex flex-col items-center gap-4 lg:items-start">
+      <h3 class="my-2 text-2xl font-bold">Exclusive</h3>
+      <h5 class="text-xl font-medium">Subscribe</h5>
+      <p class="text-base ">Get 10% off your first order</p>
+      <div class="relative w-full text-base">
+        <input
+          class="w-full py-3 pl-4 pr-10 text-white bg-black border-[1.5px] rounded-sm border-white"
+          placeholder="Enter your email" />
+        <ng-icon name="matSend" size="24"
+          class="absolute -translate-y-1/2 cursor-pointer right-2 top-1/2" />
+      </div>
+    </div>
+    <div class="flex flex-col items-center gap-4 lg:items-start">
+      <h3 class="my-2 text-2xl font-bold">Support</h3>
+      <p class="text-base text-center lg:text-left">Itaosy Ambavahaditokana, Antananarivo Madagascar
+        101.</p>
+      <p class="text-base">tahinjanaharygarry&#64;gmail.com</p>
+      <p class="text-base">+261341089861</p>
+    </div>
+    <div class="flex flex-col items-center gap-4 lg:items-start">
+      <h3 class="my-2 text-2xl font-bold">Account</h3>
+      <a href="#" class="text-base">Login / Register</a>
+      <a href="#" class="text-base">Cart</a>
+      <a href="#" class="text-base">Wishlist</a>
+      <a href="#" class="text-base">Shop</a>
+    </div>
+    <div class="flex flex-col items-center gap-4 lg:items-start">
+      <h3 class="my-2 text-2xl font-bold">Quick Link</h3>
+      <a href="#" class="text-base">Privacy Policy</a>
+      <a href="#" class="text-base">Terms Of Use</a>
+      <a href="#" class="text-base">FAQ</a>
+      <a href="#" class="text-base">Contact</a>
+    </div>
+    <div class="flex flex-col items-center gap-4 lg:items-start">
+      <h3 class="my-2 text-2xl font-bold">Download App</h3>
+      <p class="text-xs">Save $3 with App New User Only</p>
+      <div class="flex flex-col items-center gap-6 lg:gap-2 lg:flex-row">
+        <div class="relative w-28 h-28">
+          <img ngSrc="/images/qrcode.png" alt="qr code" fill />
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center px-2 py-1.5 border border-white rounded-lg">
+            <div class="relative w-6 h-6">
+              <img ngSrc="/images/playstore.png" alt="playstore" fill />
+            </div>
+            <div>
+              <p class="text-xs font-medium uppercase">get it on</p>
+              <p class="text-base font-bold capitalize">Google Play</p>
+            </div>
+          </div>
+          <div class="flex items-center px-2 py-1.5 border border-white rounded-lg">
+            <ng-icon name="faBrandApple" size="30"/>
+            <div>
+              <p class="text-xs font-medium uppercase">download on</p>
+              <p class="text-base font-bold capitalize">Apple Store</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="pt-10 pb-10 text-base text-center border-t border-t-gray-50">&copy; Copyright Garry {{today.getFullYear()}}. All right reserved</p>
+</footer>
