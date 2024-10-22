@@ -6,6 +6,7 @@ import { FlashSalesProductsComponents } from '@/app/sections/home/flash-sales-pr
 import { HeroProductsCarouselComponent } from '@/app/sections/home/hero-products-carousel/hero-products-carousel.component';
 import { NewArrivalComponent } from '@/app/sections/home/new-arrival/new-arrival.component';
 import { ProductsSection } from '@/app/sections/home/products/products.component';
+import { ShippingInfoComponent } from '@/app/sections/home/shipping-info/shipping-info.component';
 import { Component } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import {
@@ -26,6 +27,7 @@ import {
     ProductComponent,
     ProductsSection,
     NewArrivalComponent,
+    ShippingInfoComponent
   ],
   providers: [provideIcons({ faSolidArrowRight, faSolidChevronRight })],
   templateUrl: './home.component.html',
