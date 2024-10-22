@@ -1,1 +1,55 @@
-<p>new-arrival works!</p>
+<section
+  class="px-3 lg:px-4 wrapper 2xl:px-0 pt-5 lg:pt-10  pb-9 lg:pb-16">
+  <h1 class="my-6 title">Featured</h1>
+  <div
+    class="flex items-center justify-between gap-4">
+    <h3 class="text-lg font-semibold xl:text-2xl text-nowrap">New Arrival</h3>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mt-14 auto-rows-[1fr]">
+    <div class="relative flex items-center justify-center py-10 bg-black text-white lg:col-span-2 lg:row-span-2">
+      <div class="relative h-52 w-full">
+        <img ngSrc="/images/products/ps5.png" fill class="object-contain"/>
+      </div>
+      <div class="absolute left-6 bottom-6 flex flex-col gap-4">
+        <h2 class="text-2xl font-semibold">PlayStation 5</h2>
+        <p class="text-sm text-wrap">Black and White version of the PS5 coming out on
+          sale.</p>
+        <a class="text-base font-medium underline" routerLink="/shop">Shop
+          now</a>
+      </div>
+    </div>
+    <div class="relative flex items-center justify-center py-10 bg-black text-white lg:col-span-2">
+      <div class="relative h-52 w-full">
+        <img ngSrc="/images/products/black-hat.png" fill class="object-contain"/>
+      </div>
+      <div class="absolute left-6 bottom-6 flex flex-col gap-4">
+        <h2 class="text-2xl font-semibold">Women's Collections</h2>
+        <p class="text-sm text-wrap">Featured woman collections that give you another vibe.</p>
+        <a class="text-base font-medium underline" routerLink="/shop">Shop
+          now</a>
+      </div>
+    </div>
+    <div class="relative flex items-center justify-center py-10 bg-black text-white">
+      <div class="relative h-52 w-full">
+        <img ngSrc="/images/products/speaker.png" class="object-contain" fill/>
+      </div>
+      <div class="absolute left-6 bottom-6 flex flex-col gap-4">
+        <h2 class="text-2xl font-semibold">Speakers</h2>
+        <p class="text-sm text-wrap">Amazon wireless speakers.</p>
+        <a class="text-base font-medium underline" routerLink="/shop">Shop
+          now</a>
+      </div>
+    </div>
+    <div class="relative flex items-center justify-center py-10 bg-black text-white">
+      <div class="relative h-52 w-full">
+        <img ngSrc="/images/products/perfume.png" fill class="object-contain"/>
+      </div>
+      <div class="absolute left-6 bottom-6 flex flex-col gap-4">
+        <h2 class="text-2xl font-semibold">Perfume</h2>
+        <p class="text-sm text-wrap">GUCCI INTENSE OUD EDP</p>
+        <a class="text-base font-medium underline" routerLink="/shop">Shop
+          now</a>
+      </div>
+    </div>
+  </div>
+</section>
