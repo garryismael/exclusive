@@ -6,3 +6,41 @@
   padding-bottom: 1px;
   border-bottom: 0.5px solid #000000;
 }
+
+
+.menu {
+  @apply fixed top-0 left-0 flex items-center justify-center bg-white z-50 h-screen;
+  width: 100%;
+  transform-origin: right;
+  transform: scaleX(1);
+  transition: none;
+}
+
+.active {
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+
+.inactive {
+  transform: scaleX(0);
+}
+
+@keyframes toggle-in {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes toggle-out {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(0);
+  }
+}

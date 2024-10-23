@@ -26,8 +26,8 @@
     <div class="flex items-center justify-between wrapper md:px-4 xl:px-0">
       <div class="flex items-center justify-between w-full px-4 py-4  md:px-0">
         <app-logo />
-        <nav class="hidden lg:block">
-          <ul class="flex items-center gap-12">
+        <nav [ngClass]="getNavClasses()" class="menu">
+          <ul class="flex flex-col lg:flex-row items-center gap-12">
             <li><a routerLink="/" routerLinkActive="active-link"
                 [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
             <li><a routerLink="/contact" routerLinkActive="active-link"
@@ -43,7 +43,13 @@
             <ng-icon name="heroHeart" size="24" />
             <ng-icon name="heroShoppingCart" size="24" />
           </div>
-          <ng-icon name="heroBars3BottomRight" size="24" class="lg:!hidden" />
+          <button (click)="toggle()" class="flex items-center justify-center relative z-50">
+            @if (active) {
+              <ng-icon name="heroXMark" size="24" class="lg:!hidden"/>
+            } @else {
+              <ng-icon name="heroBars3BottomRight" size="24" class="lg:!hidden"/>
+            }
+          </button>
         </div>
       </div>
     </div>
