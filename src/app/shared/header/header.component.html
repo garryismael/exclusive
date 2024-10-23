@@ -26,6 +26,18 @@
     <div class="flex items-center justify-between wrapper md:px-4 xl:px-0">
       <div class="flex items-center justify-between w-full px-4 py-4  md:px-0">
         <app-logo />
+        <nav class="hidden lg:block">
+          <ul class="flex items-center gap-12">
+            <li><a routerLink="/" routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }">Contact</a></li>
+            <li><a routerLink="/about" routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }">About</a></li>
+            <li><a routerLink="/sign-up" routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }">Sign Up</a></li>
+          </ul>
+        </nav>
         <div class="flex items-center gap-6">
           <div class="flex items-center gap-2">
             <ng-icon name="heroHeart" size="24" />

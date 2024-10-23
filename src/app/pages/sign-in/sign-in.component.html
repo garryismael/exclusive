@@ -1,0 +1,29 @@
+<section
+  class="flex flex-col gap-4 text-base w-screen lg:w-full md:px-6 px-4 lg:px-0">
+  <form class="w-full">
+    <h1 class="font-medium text-4xl">Log in to Exclusive</h1>
+    <p class="mt-6 mb-10">Enter your details below</p>
+    <div class="flex flex-col gap-10">
+      <input name="emailOrPhoneNumber" type="text" class="input-field"
+        placeholder="Email or Phone Number" />
+      <input name="password" class="input-field" placeholder="Password"
+        type="password" />
+      <div class="flex flex-col md:flex-row items-center gap-4 md:gap-20 w-full">
+        <button
+          class="w-full md:w-fit py-4 text-nowrap px-12 bg-red-400 rounded text-white">
+          Log in
+        </button>
+        <a href="#" class="text-center md:text-left text-red-400 block w-full">Forget Password?</a>
+      </div>
+    </div>
+  </form>
+  <a href="#"
+    class="flex items-center justify-center gap-4 border border-black/40 rounded py-4">
+    <img ngSrc="/images/google.png" width="24" height="24" />
+    <span class="text-base">Sign in with Google</span>
+  </a>
+  <div class="flex items-center justify-center gap-4">
+    <p>Don't have an account?</p>
+    <a routerLink="/sign-up" class="border-b-[2px] border-b-black">Sign up</a>
+  </div>
+</section>

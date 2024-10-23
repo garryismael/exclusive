@@ -220,4 +220,8 @@
   .title {
     @apply w-full pl-4 text-sm md:text-lg font-bold text-left text-red-400 border-l-8 border-l-red-400;
   }
+
+  .input-field {
+    @apply border-b border-b-black outline-none py-1;
+  }
 }

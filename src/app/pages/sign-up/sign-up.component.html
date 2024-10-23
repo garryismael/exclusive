@@ -1,1 +1,26 @@
-<p>sign-up works!</p>
+<section
+  class="flex flex-col gap-4 text-base  md:w-screen lg:w-full md:px-6 px-4 lg:px-0">
+  <form class="w-full">
+    <h1 class="font-medium text-4xl">Create an account</h1>
+    <p class="mt-6 mb-10">Enter your details below</p>
+    <div class="flex flex-col gap-10">
+      <input name="name" class="input-field" type="text" placeholder="Name" />
+      <input name="emailOrPhoneNumber" type="text" class="input-field"
+        placeholder="Email or Phone Number" />
+      <input name="password" class="input-field" placeholder="Password"
+        type="password" />
+      <button class="py-4 px-32 bg-red-400 rounded text-white">
+        Create Account
+      </button>
+    </div>
+  </form>
+  <a href="#"
+    class="flex items-center justify-center gap-4 border border-black/40 rounded py-4">
+    <img ngSrc="/images/google.png" width="24" height="24" />
+    <span class="text-base">Sign up with Google</span>
+  </a>
+  <div class="flex items-center justify-center gap-4">
+    <p>Already have account?</p>
+    <a routerLink="/sign-in" class="border-b-[2px] border-b-black">Log in</a>
+  </div>
+</section>
