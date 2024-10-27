@@ -25,6 +25,7 @@
     "@ng-icons/core": "^29.5.1",
     "@ng-icons/font-awesome": "^29.5.1",
     "@ng-icons/heroicons": "^29.5.1",
+    "@ng-icons/lucide": "^29.5.2",
     "@ng-icons/material-icons": "^29.5.1",
     "clsx": "^2.1.1",
     "embla-carousel-angular": "^15.0.0",

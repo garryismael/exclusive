@@ -1,0 +1,29 @@
+<div class="dropdown">
+  <button
+    (click)="toggleDropdown($event)"
+    class="dropdown-button">
+    <ng-icon name="heroUser" size="24"  />
+  </button>
+  <div class="dropdown-content" [class.show]="isOpen">
+    <div class="item ">
+      <ng-icon name="heroUser" size="24" />
+      <span>Manage My Account</span>
+    </div>
+    <div class="item">
+      <ng-icon name="lucideShoppingBag" size="24" />
+      <span>My Order</span>
+    </div>
+    <div class="item">
+      <ng-icon name="lucideCircleX" size="24" />
+      <span>My Cancellations</span>
+    </div>
+    <div class="item">
+      <ng-icon name="lucideStar" size="24" />
+      <span>My reviews</span>
+    </div>
+    <div class="item">
+      <ng-icon name="matLogOut" size="24" class="-rotate-180" />
+      <span>Logout</span>
+    </div>
+  </div>
+</div>

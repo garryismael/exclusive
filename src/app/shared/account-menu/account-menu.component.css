@@ -1,0 +1,19 @@
+.dropdown {
+  @apply flex relative items-center justify-center;
+}
+
+.dropdown-button {
+  @apply h-8 w-8 focus-within:bg-red-500 focus-within:text-white rounded-full flex items-center justify-center;
+}
+
+.dropdown-content {
+  @apply hidden absolute top-8 right-2 bg-gray-700 text-white min-w-56 overflow-auto z-[1] rounded;
+}
+
+.show {
+  @apply block;
+}
+
+.item {
+  @apply py-3 px-4 flex items-center gap-4 text-sm;
+}

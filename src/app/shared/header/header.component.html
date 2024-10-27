@@ -39,9 +39,10 @@
           </ul>
         </nav>
         <div class="flex items-center gap-6">
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-5 md:gap-2">
             <ng-icon name="heroHeart" size="24" />
             <ng-icon name="heroShoppingCart" size="24" />
+            <app-account-menu/>
           </div>
           <button (click)="toggle()" class="flex items-center justify-center relative z-50">
             @if (active) {

@@ -6,9 +6,11 @@ import {
   heroShoppingCart,
   heroBars3BottomRight,
   heroXMark,
+  heroUser,
 } from '@ng-icons/heroicons/outline';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AccountMenuComponent } from '../account-menu/account-menu.component';
 
 @Component({
   imports: [
@@ -17,6 +19,7 @@ import { CommonModule } from '@angular/common';
     RouterLinkActive,
     RouterLink,
     CommonModule,
+    AccountMenuComponent,
   ],
   providers: [
     provideIcons({
@@ -24,6 +27,7 @@ import { CommonModule } from '@angular/common';
       heroShoppingCart,
       heroBars3BottomRight,
       heroXMark,
+      heroUser,
     }),
   ],
   standalone: true,
