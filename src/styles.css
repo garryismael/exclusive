@@ -217,6 +217,18 @@
     @apply bg-white;
   }
 
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply bg-red-500;
+  }
+
   .title {
     @apply w-full pl-4 text-sm md:text-lg font-bold text-left text-red-400 border-l-8 border-l-red-400;
   }
