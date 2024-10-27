@@ -7,13 +7,21 @@
 }
 
 .dropdown-content {
-  @apply absolute top-9 right-2 bg-gray-700 text-white min-w-56 overflow-hidden z-[1] rounded opacity-0 transform translate-x-full transition-all duration-300 ease-out;
+  @apply absolute top-9 right-7 bg-[#666666] text-white min-w-56 overflow-hidden z-[1] rounded opacity-0 transform -translate-y-full transition-all duration-300 ease-out;
+}
+
+.dropdown-content::before {
+  content: "";
+  @apply absolute top-0 left-0 right-0 bottom-0 rounded;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(102, 102, 102, 3) 100%);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: -1;
 }
 
 .show {
-  @apply opacity-100 transform translate-x-0;
+  @apply opacity-100 transform translate-y-0;
 }
-
 
 .item {
   @apply py-3 px-4 flex items-center gap-4 text-sm;
