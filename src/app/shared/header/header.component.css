@@ -9,38 +9,38 @@
 
 
 .menu {
-  @apply fixed top-0 left-0 flex items-center justify-center bg-white z-50 h-screen;
-  width: 100%;
+  @apply fixed top-0 right-0 flex items-center w-full justify-center transition-[0.5s] bg-white z-50 h-screen;
   transform-origin: right;
-  transform: scaleX(1);
-  transition: none;
+  transform: translateX(100%);
+}
+
+.menu a {
+  @apply transition-[0.3s];
 }
 
 .active {
   transition: transform 0.5s ease-in-out;
-  transform: scaleX(1);
+  transform: translateX(0);
 }
 
 .inactive {
-  transform: scaleX(0);
+  transform: translateX(100%);
 }
 
 @keyframes toggle-in {
   from {
-    transform: scaleX(0);
+    transform: translateX(100%);
   }
-
   to {
-    transform: scaleX(1);
+    transform: translateX(0);
   }
 }
 
 @keyframes toggle-out {
   from {
-    transform: scaleX(1);
+    transform: translateX(0);
   }
-
   to {
-    transform: scaleX(0);
+    transform: translateX(100%);
   }
 }
