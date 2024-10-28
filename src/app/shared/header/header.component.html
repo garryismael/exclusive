@@ -38,18 +38,18 @@
                 [routerLinkActiveOptions]="{ exact: true }">Sign Up</a></li>
           </ul>
         </nav>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center justify-end gap-6 lg:gap-0">
           <div class="flex items-center gap-5 md:gap-2">
-            <ng-icon name="heroHeart" size="24" />
+            <a class="cursor-pointer flex items-center justify-center"
+              routerLink="/wishlist"><ng-icon name="heroHeart" size="24" /></a>
             <ng-icon name="heroShoppingCart" size="24" />
-            <app-account-menu/>
+            <app-account-menu />
           </div>
-          <button (click)="toggle()" class="flex items-center justify-center relative z-50">
-            @if (active) {
-              <ng-icon name="heroXMark" size="24" class="lg:!hidden"/>
-            } @else {
-              <ng-icon name="heroBars3BottomRight" size="24" class="lg:!hidden"/>
-            }
+          <button (click)="toggleMenu()"
+            class="flex items-center justify-center relative z-50">
+            <ng-icon
+              [name]="menu === 'active' ? 'heroXMark' : 'heroBars3BottomRight'"
+              size="24" class="lg:!hidden" />
           </button>
         </div>
       </div>

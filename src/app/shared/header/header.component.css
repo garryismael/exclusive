@@ -7,11 +7,8 @@
   border-bottom: 0.5px solid #000000;
 }
 
-
 .menu {
-  @apply fixed top-0 right-0 flex items-center w-full justify-center transition-[0.5s] bg-white z-50 h-screen;
-  transform-origin: right;
-  transform: translateX(100%);
+  @apply fixed top-0 right-0 flex items-center w-full justify-center transition-[0.5s] bg-transparent z-50 h-screen lg:relative lg:h-full origin-right lg:transform-none translate-x-full;
 }
 
 .menu a {
@@ -19,6 +16,7 @@
 }
 
 .active {
+  @apply bg-white;
   transition: transform 0.5s ease-in-out;
   transform: translateX(0);
 }

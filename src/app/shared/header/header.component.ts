@@ -36,16 +36,16 @@ import { AccountMenuComponent } from '../account-menu/account-menu.component';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  active: boolean = false;
+  menu: string = '';
 
-  toggle(): void {
-    this.active = !this.active;
+  toggleMenu() {
+    this.menu = this.menu === 'active' ? 'inactive' : 'active';
   }
 
   getNavClasses() {
     return {
-      active: this.active,
-      inactive: !this.active,
+      active: this.menu === 'active',
+      inactive: this.menu === 'inactive',
     };
   }
 }
