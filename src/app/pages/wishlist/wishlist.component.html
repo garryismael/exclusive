@@ -1,0 +1,25 @@
+
+<main class="pt-48 wrapper px-3 pb-20 md:pb-36 2xl:px-0">
+  <div class="flex items-center justify-between">
+    <h3>Wishlist <span class="px-1">(4)</span></h3>
+    <button class="rounded border text-nowrap border-black px-12 py-4 text-sm">
+      Move All To Bag
+    </button>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pt-16">
+    @for (product of productsService.wishlistProducts; track $index) {
+    <app-wishlist-product [product]="product" />
+    }
+  </div>
+  <div class="flex items-center justify-between">
+    <h1 class="title">Just for you</h1>
+    <button class="text-nowrap rounded border border-black px-12 py-4 text-sm">
+      See All
+    </button>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pt-16">
+    @for (product of productsService.suggestedProducts; track $index) {
+    <app-wishlist-product [product]="product" [suggestion]="true"/>
+    }
+  </div>
+</main>
