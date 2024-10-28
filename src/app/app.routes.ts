@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { RootComponent } from './pages/root/root.component';
 import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
+import { WishlistComponent } from './pages/wishlist/wishlist.component';
 
 export const routes: Routes = [
   {
@@ -22,6 +23,7 @@ export const routes: Routes = [
           { path: 'sign-in', component: SignInComponent },
         ],
       },
+      { path: 'wishlist', component: WishlistComponent },
     ],
   },
 ];
