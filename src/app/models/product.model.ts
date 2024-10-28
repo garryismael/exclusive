@@ -10,7 +10,7 @@ export interface Product {
   price: number;
   previousPrice: number;
   image: string;
-  ratings: number;
-  numberOfStars: number;
+  ratings?: number;
+  numberOfStars?: number;
   variants?: ProductVariant[];
 }
