@@ -261,4 +261,66 @@ export class ProductRepository {
       ],
     },
   ];
+
+  public wishlistProducts: Product[] = [
+    {
+      name: 'Gucci duffle bag',
+      price: 960,
+      previousPrice: 1160,
+      image: '/images/products/bag.png',
+    },
+    {
+      name: 'RGB liquid CPU Cooler',
+      price: 160,
+      previousPrice: 170,
+      image: '/images/products/cpu-cooler.png',
+    },
+    {
+      name: 'GP11 Shooter USB Gamepad',
+      price: 660,
+      previousPrice: 0,
+      image: '/images/products/gamepad.png',
+    },
+    {
+      name: 'Quilted Satin Jacket',
+      price: 660,
+      previousPrice: 0,
+      image: '/images/products/jacket.png',
+    },
+  ];
+
+  public suggestedProducts: Product[] = [
+    {
+      name: 'ASUS FHD Gaming Laptop',
+      price: 700,
+      previousPrice: 0,
+      image: '/images/products/laptop.png',
+      ratings: 5,
+      numberOfStars: 325,
+    },
+    {
+      name: 'IPS LCD Gaming Monitor',
+      price: 120,
+      previousPrice: 160,
+      image: '/images/monitor.png',
+      ratings: 5,
+      numberOfStars: 88,
+    },
+    {
+      name: 'HAVIT HV-G92 Gamepad',
+      price: 120,
+      previousPrice: 160,
+      image: '/images/gamepad.png',
+      ratings: 5,
+      numberOfStars: 88,
+    },
+    {
+      name: 'AK-900 Wired Keyboard',
+      price: 120,
+      previousPrice: 160,
+      image: '/images/keyboard.png',
+      ratings: 5,
+      numberOfStars: 88,
+    },
+  ];
 }

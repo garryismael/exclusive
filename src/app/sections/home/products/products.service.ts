@@ -18,4 +18,12 @@ export class ProductsService {
   get allProducts() {
     return this.repository.allProducts;
   }
+
+  get wishlistProducts() {
+    return this.repository.wishlistProducts;
+  }
+
+  get suggestedProducts() {
+    return this.repository.suggestedProducts;
+  }
 }
